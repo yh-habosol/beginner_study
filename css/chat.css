@@ -93,10 +93,11 @@
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: 600;
+  display: block;
 }
 
 .incoming-message .message__author {
-  margin-top: 20px;
+  margin-top: 10px;
   display: block;
   font-weight: 600;
   font-size: 12px;
