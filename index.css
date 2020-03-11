@@ -1,3 +1,5 @@
+@import "reset.css";
+
 .form,
 .greetings {
   display: none;
@@ -29,4 +31,29 @@ body {
   width: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.js-weather {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.js-clock {
+  font-size: 200px;
+  margin-bottom: 30px;
+}
+.form {
+  margin-bottom: 10px;
+}
+.js-toDoForm {
+  margin-bottom: 30px;
 }
