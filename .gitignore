@@ -228,4 +228,4 @@ dist
 
 .pnp.*
 package-lock.json
-videos
+uploads
