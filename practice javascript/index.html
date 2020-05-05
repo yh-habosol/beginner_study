@@ -4,30 +4,36 @@
     <title>WEB1-Welcome</title>
     <meta charset="utf-8" />
     <script>
+      function LinksSetColor(color) {
+        const alist = document.querySelectorAll("a");
+        let i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+
+      function BodySetBackgroundColor(color) {
+        document.querySelector("body").style.backgroundColor = color;
+      }
+
+      function BodySetColor(color) {
+        document.querySelector("body").style.color = color;
+      }
+
       function nightDayHandler(self) {
-        const target = document.querySelector("body");
         if (self.value === "night") {
-          target.style.backgroundColor = "black";
-          target.style.color = "white";
+          BodySetBackgroundColor("black");
+          BodySetColor("white");
           self.value = "day";
 
-          const alist = document.querySelectorAll("a");
-          let i = 0;
-          while (i < alist.length) {
-            alist[i].style.color = "powderblue";
-            i = i + 1;
-          }
+          LinksSetColor("powderblue");
         } else {
-          target.style.backgroundColor = "white";
-          target.style.color = "black";
+          BodySetBackgroundColor("white");
+          BodySetColor("black");
           self.value = "night";
 
-          const alist = document.querySelectorAll("a");
-          let i = 0;
-          while (i < alist.length) {
-            alist[i].style.color = "blue";
-            i = i + 1;
-          }
+          LinksSetColor("blue");
         }
       }
     </script>
