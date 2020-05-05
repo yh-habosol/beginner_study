@@ -4,36 +4,39 @@
     <title>WEB1-Welcome</title>
     <meta charset="utf-8" />
     <script>
-      function LinksSetColor(color) {
-        const alist = document.querySelectorAll("a");
-        let i = 0;
-        while (i < alist.length) {
-          alist[i].style.color = color;
-          i = i + 1;
-        }
-      }
+      let Links = {
+        setColor: function (color) {
+          const alist = document.querySelectorAll("a");
+          let i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = color;
+            i = i + 1;
+          }
+        },
+      };
 
-      function BodySetBackgroundColor(color) {
-        document.querySelector("body").style.backgroundColor = color;
-      }
-
-      function BodySetColor(color) {
-        document.querySelector("body").style.color = color;
-      }
+      let Body = {
+        setBackgroundColor: function (color) {
+          document.querySelector("body").style.backgroundColor = color;
+        },
+        setColor: function (color) {
+          document.querySelector("body").style.color = color;
+        },
+      };
 
       function nightDayHandler(self) {
         if (self.value === "night") {
-          BodySetBackgroundColor("black");
-          BodySetColor("white");
+          Body.setBackgroundColor("black");
+          Body.setColor("white");
           self.value = "day";
 
-          LinksSetColor("powderblue");
+          Links.setColor("powderblue");
         } else {
-          BodySetBackgroundColor("white");
-          BodySetColor("black");
+          Body.setBackgroundColor("white");
+          Body.setColor("black");
           self.value = "night";
 
-          LinksSetColor("blue");
+          Links.setColor("blue");
         }
       }
     </script>
