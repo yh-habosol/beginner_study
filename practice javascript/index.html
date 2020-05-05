@@ -6,23 +6,26 @@
   </head>
   <body>
     <a href="index.html"> <h1>WEB</h1></a>
-
     <input
+      id="toggle"
       type="button"
+      ,
       value="night"
+      ,
       onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white'; 
+        if(document.querySelector('#toggle').value==='night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white'; 
+            document.querySelector('#toggle').value='day';
+        }
+        else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black'; 
+            document.querySelector('#toggle').value='night';
+        }
     "
     />
-    <input
-      type="button"
-      value="day"
-      onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black'; 
-    "
-    />
+
     <ol>
       <li><a href="1.html">1. HTML</a></li>
       <li><a href="2.html">2. CSS</a></li>
