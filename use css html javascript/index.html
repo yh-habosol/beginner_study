@@ -10,6 +10,7 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+
     <style>
       html,
       body {
@@ -31,7 +32,11 @@
         margin-right: 7px;
       }
       .header {
-        text-align: right;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header__column-left {
+        margin-left: 10px;
       }
       .main {
         display: flex;
@@ -66,17 +71,30 @@
         margin-right: 15px;
       }
       .search {
-        background-image: url("images/microphone.png");
         border-radius: 2em;
       }
       .list-input {
         border-radius: 5px;
       }
     </style>
+    <script src="button.js"></script>
   </head>
   <body>
     <header>
       <div class="header">
+        <div class="header__column-left">
+          <div class="js-clock">
+            <h5>00:00:00</h5>
+          </div>
+          <div>
+            <input
+              type="button"
+              value="night"
+              class="night_day_button"
+              onclick="nightDayHandler(this)"
+            />
+          </div>
+        </div>
         <div class="header__column">
           <span><a href="#">gmail</a></span>
           <span><a href="#">image</a></span>
@@ -140,5 +158,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="clock.js"></script>
   </body>
 </html>
