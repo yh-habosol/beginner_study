@@ -20,11 +20,11 @@ const VideoSchema = new mongoose.Schema({
   },
   comments: [
     {
-      type: mongoose.Schema.Types.OpjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Comment",
     },
   ],
 });
 
-const model = mongoose.Schema.model("Video", VideoSchema);
+const model = mongoose.model("Video", VideoSchema);
 export default model;
