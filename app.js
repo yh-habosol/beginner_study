@@ -10,6 +10,7 @@ import routes from "./routes";
 import { localsMiddleware } from "./middlewares";
 import passport from "passport";
 import "./passport";
+import session from "express-session";
 
 const app = express();
 
@@ -21,6 +22,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(morgan("dev"));
+
+app.use(
+  session({
+    secret: precess.env.COOKIE_SECRET,
+    resave: true,
+    saveUninitialized: false,
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
