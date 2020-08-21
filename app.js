@@ -11,8 +11,12 @@ import { localsMiddleware } from "./middlewares";
 import passport from "passport";
 import "./passport";
 import session from "express-session";
+import mongoose from "mongoose";
+import MongoStore from "connect-mongo";
 
 const app = express();
+
+const CokieStore = MongoStore(session);
 
 app.set("view engine", "pug");
 app.use("/uploads", express.static("uploads"));
@@ -28,6 +32,7 @@ app.use(
     secret: precess.env.COOKIE_SECRET,
     resave: true,
     saveUninitialized: false,
+    store: new CokieStore({ mongooseConnection: mongoose.connection }),
   })
 );
 app.use(passport.initialize());
