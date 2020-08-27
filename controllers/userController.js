@@ -38,8 +38,14 @@ export const postLogin = (req, res) =>
     successRedirect: routes.home,
   });
 
-export const logout = (req, res) => res.redirect(routes.home);
+export const githubLoginCallback = (accessToken, refreshToken, profile, cb) => {
+  console.log(accessToken, refreshToken, profile, cb);
+};
 
+export const logout = (req, res) => {
+  req.logout();
+  res.redirect(routes.home);
+};
 export const userDetail = (req, res) =>
   res.render("userDetail", { pageTitle: "UserDetail" });
 export const editProfile = (req, res) =>

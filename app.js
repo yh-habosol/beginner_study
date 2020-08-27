@@ -29,7 +29,7 @@ app.use(morgan("dev"));
 
 app.use(
   session({
-    secret: precess.env.COOKIE_SECRET,
+    secret: process.env.COOKIE_SECRET,
     resave: true,
     saveUninitialized: false,
     store: new CokieStore({ mongooseConnection: mongoose.connection }),
