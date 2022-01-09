@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-right: 7px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .header__column-left {
+        margin-left: 10px;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer__footer {
+        border: 0.5px solid #e8e7e7;
+        background-color: #f1eeee;
+        padding: 4px 20px;
+      }
+      .footer__footer-bottom {
+        display: flex;
+        justify-content: space-between;
+      }
+      .google {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      .header__column {
+        padding-top: 5px;
+      }
+      .header__column > span {
+        margin-right: 15px;
+      }
+      .search {
+        border-radius: 2em;
+      }
+      .list-input {
+        border-radius: 5px;
+      }
+    </style>
+    <script src="button.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__column-left">
+          <div class="js-clock">
+            <h5>00:00:00</h5>
+          </div>
+          <div>
+            <input
+              type="button"
+              value="night"
+              class="night_day_button"
+              onclick="nightDayHandler(this)"
+            />
+          </div>
+        </div>
+        <div class="header__column">
+          <span><a href="#">gmail</a></span>
+          <span><a href="#">image</a></span>
+          <span>
+            <a href="#"><i class="fas fa-square"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="fas fa-circle"></i></a>
+          </span>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__title">
+        <i class="google fab fa-google"></i>
+      </div>
+      <div class="search_bar">
+        <i class="fas fa-search"></i>
+        <input class="search" type="text" />
+        <i class="fas fa-keyboard"></i>
+      </div>
+      <div>
+        <ul class="button">
+          <li>
+            <a href="#"
+              ><input class="list-input" type="button" , value="Google Search"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><input
+                class="list-input"
+                type="button"
+                ,
+                value="I'm Felling Lucky"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="explanation">
+        <a href="#">Contents</a>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer__footer footer__footer-top">
+          <span>Korea</span>
+        </div>
+        <div class="footer__footer footer__footer-bottom">
+          <div class="footer__column">
+            <span><a href="#">ad</a></span>
+            <span><a href="#">business</a></span>
+            <span><a href="#">Google information</a></span>
+            <span><a href="#">search basic</a></span>
+          </div>
+          <div class="footer__column">
+            <span><a href="#">alaala</a></span>
+            <span><a href="#">blabla</a></span>
+            <span><a href="#">config</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="clock.js"></script>
+  </body>
+</html>
