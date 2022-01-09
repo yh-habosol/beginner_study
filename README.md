@@ -1,1 +1,1 @@
-# beginner_study
+공부하면서 만든 repository 정리
